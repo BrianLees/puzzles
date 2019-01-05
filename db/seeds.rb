@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Puzzle.destroy_all
+
+Puzzle.create(
+  [{name: 'Brave', file_name: 'brave.jpg', default_size: 16}]
+)
