@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @puzzle.name %>
+</p>
+
+<p>
+  <strong>File name:</strong>
+  <%= @puzzle.file_name %>
+</p>
+
+<p>
+  <strong>Default size:</strong>
+  <%= @puzzle.default_size %>
+</p>
+
+<%= link_to 'Edit', edit_puzzle_path(@puzzle) %> |
+<%= link_to 'Back', puzzles_path %>
