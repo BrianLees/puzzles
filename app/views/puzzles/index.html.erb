@@ -5,25 +5,16 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>File name</th>
-      <th>Default size</th>
-      <th>Height</th>
-      <th>Width</th>
-      <th colspan="2"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @puzzles.each do |puzzle| %>
+    <% @puzzles.each_slice(4) do |batch| %>
       <tr>
-        <td><%= puzzle.name %></td>
-        <td><%= puzzle.file_name %></td>
-        <td><%= puzzle.default_size %></td>
-        <td><%= puzzle.height %></td>
-        <td><%= puzzle.width %></td>
-        <td><%= link_to 'Solve', puzzle %></td>
-        <td><%= link_to 'Destroy', puzzle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% batch.each do |puzzle| %>
+          <td><%= link_to image_tag(puzzle.thumbnail_file_name), puzzle %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
