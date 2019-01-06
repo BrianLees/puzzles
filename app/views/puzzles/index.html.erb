@@ -8,7 +8,9 @@
       <th>Name</th>
       <th>File name</th>
       <th>Default size</th>
-      <th colspan="3"></th>
+      <th>Height</th>
+      <th>Width</th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -18,7 +20,9 @@
         <td><%= puzzle.name %></td>
         <td><%= puzzle.file_name %></td>
         <td><%= puzzle.default_size %></td>
-        <td><%= link_to 'Show', puzzle %></td>
+        <td><%= puzzle.height %></td>
+        <td><%= puzzle.width %></td>
+        <td><%= link_to 'Solve', puzzle %></td>
         <td><%= link_to 'Destroy', puzzle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
