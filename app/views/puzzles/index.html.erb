@@ -19,6 +19,7 @@
         <td><%= puzzle.file_name %></td>
         <td><%= puzzle.default_size %></td>
         <td><%= link_to 'Show', puzzle %></td>
+        <td><%= link_to 'Destroy', puzzle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

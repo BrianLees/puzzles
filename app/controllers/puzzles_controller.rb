@@ -10,6 +10,17 @@ class PuzzlesController < ApplicationController
   # GET /puzzles/1
   # GET /puzzles/1.json
   def show
+    render :layout => 'puzzle'
+  end
+
+  # DELETE /puzzles/1
+  # DELETE /puzzles/1.json
+  def destroy
+    @puzzle.destroy
+    respond_to do |format|
+      format.html { redirect_to puzzles_url, notice: 'Puzzle was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   private
