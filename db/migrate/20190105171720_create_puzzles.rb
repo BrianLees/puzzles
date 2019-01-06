@@ -4,6 +4,8 @@ class CreatePuzzles < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :file_name
       t.integer :default_size
+      t.integer :height
+      t.integer :width
 
       t.timestamps
     end
